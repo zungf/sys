@@ -520,7 +520,7 @@ client.on('message',async message => {
 });
 
 client.on('message', message => {
-    if (message.content == "P.جمع") {
+    if (message.content == "#جمع") {
         var x = ["212+212=?",
 "321+43=?",
 "4534+23",
@@ -568,7 +568,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-    if (message.content == "P.ضرب") {
+    if (message.content == "#ضرب") {
         var x = ["9x9=?",
 "8x9=?",
 "4x4=?",
@@ -616,7 +616,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-    if (message.content == "P.طرح") {
+    if (message.content == "#طرح") {
         var x = ["4326-2345=?",
 "5822-8547=?",
 "543-823=?",
@@ -793,7 +793,7 @@ message.channel.sendEmbed(embed)
     '*** روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك.  ***'
  ]
   client.on('message', message => {
-    var prefix = 'P.';
+    var prefix = '#';
   if (message.content.startsWith(prefix + 'حكم')) {
    var mariam= new Discord.RichEmbed()
    .setTitle("لعبة حكم ..")
@@ -822,7 +822,7 @@ client.on('message', PuP => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' P.help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,'The Best, For The Best',' P.inv '];
+    var setGame = [' #help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,'The Best, For The Best',' P.inv '];
     var i = -1;
     var j = 0;
     setInterval(function (){
