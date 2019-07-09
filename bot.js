@@ -9,8 +9,8 @@ const ms = require('ms');
 const prefix = '#'
 
 client.on('message', msg => {
-    if (msg.content === 'احبك') {
-      msg.reply('**لاتحتك يا اخوي لو سمحت**');
+    if (msg.content === 'test') {
+      msg.reply('**I’m On**');
     }
   });
   
