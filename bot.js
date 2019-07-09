@@ -1248,7 +1248,7 @@ message.author.send(`**مدة الرابط : يـوم
 
 client.on("message", msg => {
     var prefix = "#";
-if(msg.content.startsWith (prefix + "mylook")) {
+if(msg.content.startsWith (prefix + "user")) {
 if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
 embed.addField(":cloud_tornado:  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
