@@ -8,11 +8,12 @@ const fs = require('fs');
 const ms = require('ms');
 const prefix = '#'
 
+
 client.on('message', msg => {
-    if (msg.content === 'test') {
-      msg.reply('I’m On');
-    }
-  });
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
   
   
   client.on("message", message => {
