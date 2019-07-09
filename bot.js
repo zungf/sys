@@ -1306,7 +1306,7 @@ client.on('message', message => {
   })
 
 client.on('message', message => {
-    if (message.content.startsWith("#link")) {
+    if (message.content.startsWith("رابط")) {
 
   message.channel.createInvite({
         thing: true,
@@ -3608,7 +3608,7 @@ if(!args[0]) return message.reply('Write Some Things');
 
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('P.kiss')) {
+        if(message.content.startsWith('#kiss')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -4067,7 +4067,7 @@ message.channel.sendEmbed(cat);
     });
 
   client.on('message', message => {
-    if (message.content.startsWith("P.bans")) {
+    if (message.content.startsWith("#bans")) {
         message.guild.fetchBans()
         .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
   .catch(console.error);
