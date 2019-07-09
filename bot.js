@@ -873,7 +873,7 @@ var prefix = "#";
 });
 
 client.on('message',async Epic => {
-  var prefix = "P." ;
+  var prefix = "#" ;
   if(Epic.content.startsWith(prefix + "vonline")) {
   if(!Epic.guild.member(Epic.author).hasPermissions('MANAGE_CHANNELS')) return Epic.reply(':x: **I Dont Have Permissions**');
   if(!Epic.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return Epic.reply(':x: **You Dont Have Permissions**');
@@ -892,7 +892,7 @@ client.on('message',async Epic => {
 
 
 client.on('message', message => {
-var prefix = "P.";
+var prefix = "#";
 var cats = ["http://www.shuuf.com/shof/uploads/2015/09/09/jpg/shof_b9d73150f90a594.jpg","https://haltaalam.info/wp-content/uploads/2015/05/0.208.png","https://haltaalam.info/wp-content/uploads/2015/05/266.png","https://haltaalam.info/wp-content/uploads/2015/05/250.png","https://haltaalam.info/wp-content/uploads/2017/02/0.2517.png","https://pbs.twimg.com/media/CP0mi02UAAA3U2z.png","http://www.shuuf.com/shof/uploads/2015/08/31/jpg/shof_3b74fa7295ec445.jpg","http://www.shuuf.com/shof/uploads/2015/08/22/jpg/shof_fa3be6ab68fb415.jpg","https://pbs.twimg.com/media/CSWPvmRUcAAeZbt.png","https://pbs.twimg.com/media/B18VworIcAIMGsE.png"]
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'هل تعلم')) {
@@ -905,7 +905,7 @@ message.channel.sendEmbed(cat);
 
 
 client.on('message', message => {
-var prefix = "P.";
+var prefix = "#";
       if(message.content === prefix + "schannel") {
       if(!message.channel.guild) return;
       if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':x:');
@@ -920,7 +920,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("**My Prefix Is** : `P.`")
+    message.reply("**My Prefix Is** : `#`")
     }
 });
 
@@ -929,14 +929,14 @@ client.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-  let prefix = "P.";
+  let prefix = "#";
   let messageArray = message.content.split (" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
 
 
-if(cmd === `P.{prefix}8ball`){
+if(cmd === `#{prefix}8ball`){
 
 
 if(!args[1]) return message.reply("Please ask a full question!");
@@ -975,10 +975,10 @@ client.on("message", message => {
         let roleembed = new Discord.RichEmbed()
     .setDescription(`
     أمثله على الأوامر :
-    P.role @mention rolename : لأعطاء رتبة لعضو معين
-    P.role all rolename : لأعطاء رتبة للجميع
-    P.role humans rolename : لأعطاء رتبة للاشخاص فقط
-    P.role bots rolename : لأعطاء رتبة لجميع البوتات`)
+    #role @mention rolename : لأعطاء رتبة لعضو معين
+    #role all rolename : لأعطاء رتبة للجميع
+    #role humans rolename : لأعطاء رتبة للاشخاص فقط
+    #role bots rolename : لأعطاء رتبة لجميع البوتات`)
     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
       var args = message.content.split(' ').slice(1);
       var msg = message.content.toLowerCase();
@@ -1030,7 +1030,7 @@ client.on("message", message => {
 
 client.on("message", (message) => {
      
-   if (message.content.startsWith("P.new")) {
+   if (message.content.startsWith("#new")) {
         const reason = message.content.split(" ").slice(1).join(" ");      
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);     
@@ -1061,7 +1061,7 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("P.close")) {
+  if (message.content.startsWith("#close")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
        message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`P.confirm\`. This will time out in 10 seconds and be cancelled.`)
@@ -1227,11 +1227,11 @@ client.on('message', message => {
   })
 
 client.on('message', message => {
-    if (message.content.startsWith("P.link")) {
+    if (message.content.startsWith("#link")) {
 
   message.channel.createInvite({
         thing: true,
-        maxUses: 100,
+        maxUses: 5,
         maxAge: 86400
     }).then(invite =>
       message.author.sendMessage(invite.url)
@@ -1239,7 +1239,7 @@ client.on('message', message => {
   message.channel.send("**:link:.تم ارسال الرابط برسالة خاصة**")
 
 message.author.send(`**مدة الرابط : يـوم
-عدد استخدامات الرابط : 100**`)
+عدد استخدامات الرابط : 5**`)
 
 
     }
