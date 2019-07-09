@@ -10,7 +10,7 @@ const prefix = '#'
 
 client.on('message', msg => {
     if (msg.content === 'test') {
-      msg.reply('**I’m On**');
+      msg.reply('I’m On');
     }
   });
   
