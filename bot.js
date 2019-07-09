@@ -6,8 +6,6 @@ const math = require('math-expression-evaluator');
 const figlet = require('figlet'); 
 const fs = require('fs');
 const ms = require('ms');
-const jimp = require('jimp');
-const Canvas = require('canvas');
 const prefix = '#'
 
 client.on('message', msg => {
