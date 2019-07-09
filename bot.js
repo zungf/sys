@@ -6,7 +6,7 @@ const math = require('math-expression-evaluator');
 const figlet = require('figlet'); 
 const fs = require('fs');
 const ms = require('ms');
-const prefix = '#.'
+const prefix = '#'
 
 client.on('message', msg => {
     if (msg.content === 'احبك') {
@@ -861,7 +861,7 @@ client.on('ready', function(){
 
 
 client.on('message', message => {
-var prefix = "P.";
+var prefix = "#";
       if(message.content === prefix + "hchannel") {
       if(!message.channel.guild) return;
       if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
