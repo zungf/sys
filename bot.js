@@ -6,7 +6,7 @@ const math = require('math-expression-evaluator');
 const figlet = require('figlet'); 
 const fs = require('fs');
 const ms = require('ms');
-const prefix = 'P.'
+const prefix = '#.'
 
 client.on('message', msg => {
     if (msg.content === 'احبك') {
@@ -14,13 +14,6 @@ client.on('message', msg => {
     }
   });
   
-  
-   client.on('message', msg => {
-    if (msg.content === 'هلا') {
-      msg.reply('**هلا بيك :heart: **');
-    }
-  });
-
   
   client.on("message", message => {
     if(message.content.startsWith(prefix + 'v2min')) {
