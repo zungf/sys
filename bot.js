@@ -526,7 +526,7 @@ client.on('guildMemberAdd', member => {
   .addField("***شكرا الانضمامك الينا***" ,member.user.username )
     .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
     .setColor('RANDOM')
-    .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
+    .setImage('https://cdn.discordapp.com/attachments/548427037262479372/598225805470072854/welcome_-_obx.png')
 var channel =member.guild.channels.find('name', 'welcom')
 if (!channel) return;
 channel.send({embed : embed});
