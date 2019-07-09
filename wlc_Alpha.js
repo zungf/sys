@@ -81,4 +81,4 @@ welcomer.sendFile(canvas.toBuffer())
       });                    
  }
 });
- client.login('');
+ client.login('NTY1OTE4OTE5MjY1NjE1ODgz.XSTerA.eIvCb92u88yKv0j1POz3IupqP9Y');
